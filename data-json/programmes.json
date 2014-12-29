@@ -1,0 +1,172 @@
+[
+  {
+    "filiere": 1,
+    "niveaux": [
+      {
+        "id": 1,
+        "semestres": [
+          {
+            "id": 1,
+            "matieres": [
+              {
+                "mod": 0,
+                "horaire": "72 heures"
+              },
+              {
+                "mod": 1,
+                "horaire": "72 heures"
+              },
+              {
+                "mod": 2,
+                "horaire": "72 heures"
+              },
+              {
+                "mod": 3,
+                "horaire": "20 heures"
+              },
+              {
+                "mod": 4,
+                "horaire": "36 heures"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "matieres": [
+              {
+                "mod": 5,
+                "horaire": "36 heures"
+              },
+              {
+                "mod": 7,
+                "horaire": "72 heures"
+              },
+              {
+                "mod": 8,
+                "horaire": "20 heures"
+              },
+              {
+                "mod": 9,
+                "horaire": "20 heures"
+              },
+              {
+                "mod": 10,
+                "horaire": "36 heures"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "semestres": [
+          {
+            "id": 3,
+            "matieres": [
+              {
+                "mod": 11,
+                "horaire": "72 heures"
+              },
+              {
+                "mod": 12,
+                "horaire": "36 heures"
+              },
+              {
+                "mod": 13,
+                "horaire": "36 heures"
+              },
+              {
+                "mod": 14,
+                "horaire": "20 heures"
+              },
+              {
+                "mod": 15,
+                "horaire": "72 heures"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "matieres": [
+              {
+                "mod": 16,
+                "horaire": "72 heures"
+              },
+              {
+                "mod": 15,
+                "horaire": "36 heures"
+              },
+              {
+                "mod": 17,
+                "horaire": "36 heures"
+              },
+              {
+                "mod": 18,
+                "horaire": "36 heures"
+              },
+              {
+                "mod": 19,
+                "horaire": "72 heures"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "semestres": [
+          {
+            "id": 5,
+            "matieres": [
+              {
+                "mod": 20,
+                "horaire": "36 heures"
+              },
+              {
+                "mod": 21,
+                "horaire": "36 heures"
+              },
+              {
+                "mod": 22,
+                "horaire": "72 heures"
+              },
+              {
+                "mod": 23,
+                "horaire": "36 heures"
+              },
+              {
+                "mod": 24,
+                "horaire": "36 heures"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "matieres": [
+              {
+                "mod": 25,
+                "horaire": "20 heures"
+              },
+              {
+                "mod": 26,
+                "horaire": "72 heures"
+              },
+              {
+                "mod": 27,
+                "horaire": "20 heures"
+              },
+              {
+                "mod": 28,
+                "horaire": "72 heures"
+              },
+              {
+                "mod": 29,
+                "horaire": "72 heures"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

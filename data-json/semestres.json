@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nom": "Semestre 1",
+    "niveau":1,
+    "description": "Eiusmod magna officia Lorem dolor ut veniam cupidatat adipisicing. Ullamco fugiat do veniam est pariatur Lorem amet consequat tempor. Id laboris aliqua occaecat nisi commodo aute nulla ea. Consectetur anim laboris culpa dolore id cillum nisi eiusmod. In ex duis eu magna. Laborum labore amet incididunt incididunt dolor aliqua aute reprehenderit mollit.\r\n"
+  },
+  {
+    "id": 2,
+    "nom": "Semestre 2",
+    "niveau":1,
+    "description": "Eiusmod nulla exercitation ut ut dolore proident ea irure. Aliquip eiusmod velit est sunt. Sint culpa laboris sit Lorem commodo nostrud irure velit. Fugiat aliqua laboris occaecat ea consectetur est nisi deserunt mollit aute cupidatat esse esse pariatur. Reprehenderit et aliqua incididunt laboris sit voluptate officia sint ex deserunt aliqua in non. Reprehenderit ad non nulla ad.\r\n"
+  },
+  {
+    "id": 3,
+    "nom": "Semestre 3",
+    "niveau":2,
+    "description": "Minim veniam consectetur aliqua elit esse. Nisi aute aute consectetur sint ut magna cillum voluptate. Amet commodo deserunt excepteur Lorem ad eiusmod. Amet non dolor do aliqua elit ad nostrud sit laborum cillum adipisicing nulla cillum. Est excepteur qui cillum quis proident proident enim anim fugiat reprehenderit labore quis adipisicing excepteur. Et nisi id velit eiusmod. Ut cupidatat dolore enim aute velit veniam labore amet est cupidatat.\r\n"
+  },
+  {
+    "id": 4,
+    "nom": "Semestre 4",
+    "niveau":2,
+    "description": "Pariatur sunt ipsum non non proident. Commodo laboris mollit ad veniam ad nostrud aliqua dolore voluptate sit adipisicing. Cupidatat sunt irure veniam cillum nostrud. Tempor aliqua anim ipsum aliqua incididunt sunt.\r\n"
+  },
+  {
+    "id": 5,
+    "nom": "Semestre 5",
+    "niveau":3,
+    "description": "Ad dolor sint aute dolor nostrud cillum magna esse laboris amet nostrud cupidatat enim. Non reprehenderit commodo elit amet laboris ipsum nulla mollit in ad ullamco laboris nisi. Dolore fugiat dolore ullamco occaecat nostrud deserunt Lorem ipsum ex occaecat.\r\n"
+  },
+  {
+    "id": 6,
+    "nom": "Semestre 6",
+    "niveau":3,
+    "description": "Incididunt nisi veniam ut in est esse cupidatat. Consequat cillum velit amet minim veniam esse. Eu adipisicing sint non ea ex labore id pariatur.\r\n"
+  }
+]

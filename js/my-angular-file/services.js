@@ -87,12 +87,23 @@ app.factory('FormationService',function($http,FiliereService){
 	      			value.filieres = FiliereService.getFiliereByFormation(value.id);
 	          });
 	          return formations;//.getSomeData();
+	      },
+	      getFormationById: function (idFormation) {
+	      		var data = null;
+	      		angular.forEach(formations,function(value,index){
+	          		if(value.id == idFormation){
+	          			data = value;
+	          			data.filieres = FiliereService.getFiliereByFormation(value.id);
+	          		}
+	          		//return value;
+	          });
+	          return data;//.getSomeData();
 	      }
 	    };
 
 	});
 
-app.factory('FiliereService',function($http){
+app.factory('FiliereService',function($http,detailsFiliereService){
 		var filieres = null;
 
 	    var promise = $http.get('data-json/filieres.json').success(function (data) {
@@ -114,11 +125,172 @@ app.factory('FiliereService',function($http){
 	          			data.push(value)
 	          });
 	          return data;//.getSomeData();
+	      },
+	      getFiliereById: function (idFiliere) {
+	      		var data = null;
+	      		angular.forEach(filieres,function(value,index){
+	          		if(value.id == idFiliere){
+	          			data = value;
+	          			data['details'] = detailsFiliereService.getFiliereDetails(idFiliere);
+	          		}
+	          			
+	          		//return value;
+	          });
+	          return data;//.getSomeData();
+	      }
+	    };
+
+	});
+app.factory('detailsFiliereService',function($http){
+		var filieres = null;
+
+	    var promise = $http.get('data-json/details-filieres.json').success(function (data) {
+	    	//console.log(data);
+	      filieres = data;
+	    });
+
+	    return {
+	      promise:promise,
+	      setData: function (data) {
+	          filieres = data;
+	      },
+	      getFilieres: function () {
+	          return filieres;//.getSomeData();
+	      },
+	      getFiliereDetails: function (idFiliere) {
+	      		var data = null;
+	      		angular.forEach(filieres,function(value,index){
+	          		if(value.filiere == idFiliere)
+	          			data = value;
+	          		//return value;
+	          });
+	          return data;//.getSomeData();
+	      }
+	    };
+
+	});
+/*==================== Semestres ============================*/
+app.factory('SemestreService',function($http){
+		var semestres = null;
+	    var promise = $http.get('data-json/semestres.json').success(function (data) {
+	      semestres = data;
+	    });
+
+	    return {
+	      promise:promise,
+	      setData: function (data) {
+	          semestres = data;
+	      },
+	      getsemestres: function () {
+	          return semestres;//.getSomeData();
+	      },
+	      getSemestre: function (idSemestre) {
+	      		var data = null;
+	      		angular.forEach(semestres,function(value,index){
+	          		if(value.id == idSemestre)
+	          			data = value;
+	          });
+	          return data;//.getSomeData();
 	      }
 	    };
 
 	});
 
+/*==================== Modules ============================*/
+app.factory('ModulesService',function($http){
+		var modules = null;
+	    var promise = $http.get('data-json/modules.json').success(function (data) {
+	      modules = data;
+	    });
+
+	    return {
+	      promise:promise,
+	      setData: function (data) {
+	          modules = data;
+	      },
+	      getmodules: function () {
+	          return modules;//.getSomeData();
+	      },
+	      getModule: function (idModule) {
+	      		var data = null;
+	      		angular.forEach(modules,function(value,index){
+	          		if(value.id == idModule)
+	          			data = value;
+	          });
+	          return data;//.getSomeData();
+	      }
+	    };
+
+	});
+
+/*==================== niveaux ============================*/
+app.factory('NiveauxService',function($http){
+		var niveaux = null;
+	    var promise = $http.get('data-json/niveaux.json').success(function (data) {
+	      niveaux = data;
+	    });
+
+	    return {
+	      promise:promise,
+	      setData: function (data) {
+	          niveaux = data;
+	      },
+	      getNiveaux: function () {
+	          return niveaux;//.getSomeData();
+	      },
+	      getNiveau: function (idNiveau) {
+	      		var data = null;
+	      		angular.forEach(niveaux,function(value,index){
+	          		if(value.id == idNiveau)
+	          			data = value;
+	          });
+	          return data;//.getSomeData();
+	      }
+	    };
+
+	});
+/*==================== Filiere-Programmes service ============================*/
+app.factory('filiereProgrammeService',function($http,SemestreService,NiveauxService,ModulesService){
+		var programmes = null;
+	    var promise = $http.get('data-json/programmes.json').success(function (data) {
+	    	angular.forEach(data,function(filiere,index){
+	          		angular.forEach(filiere.niveaux,function(niveau,index){
+	          			niveau['niveau'] = NiveauxService.getNiveau(niveau.id);
+
+	          			angular.forEach(niveau.semestres,function(sem,index){
+	          				sem['semestre']= SemestreService.getSemestre(sem.id);
+
+	          				angular.forEach(sem.matieres,function(mat,index){
+		          				mat.matiere= ModulesService.getModule(mat.mod);
+		          			});
+	          			});
+
+	          			
+	          			console.log(niveau);
+	          		});
+	          });
+	      programmes = data;
+	    });
+
+	    return {
+	      promise:promise,
+	      setData: function (data) {
+	          programmes = data;
+	      },
+	      getprogrammes: function () {
+	          return programmes;//.getSomeData();
+	      },
+	      getProgramme: function (idFiliere) {
+	      		var data = null;
+	      		angular.forEach(programmes,function(value,index){
+	          		if(value.filiere == idFiliere)
+	          			data = value;
+	          });
+	          return data;//.getSomeData();
+	      }
+	    };
+
+	});
 /*=============== les programmes ====================*/
 app.factory('ProgrammeService',function($http){
 		var formations = null;

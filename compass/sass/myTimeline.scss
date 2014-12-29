@@ -13,19 +13,16 @@ $bg-entry: rgb(80,80,80);
   position: relative;
   padding:0px;
   list-style-type:none;
+ 
   
-  /*thanks to
-     https://twitter.com/JacoKoster
-  */
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEElEQVQIW2NMTEz8z8gABAAPKwIlXWq1kgAAAABJRU5ErkJggg==);
-  background-repeat:repeat-y;
-  background-position:50% 0;
-  
-  
+  .block{
+    position: relative;
+    z-index: 20;
+  }
 
     .year {
     background: $bg-entry;
-    font-size: 3em;
+    font-size: 2em;
     max-width: 4em; 
     clear: both; 
     margin: 1em auto 2em;
@@ -37,6 +34,11 @@ $bg-entry: rgb(80,80,80);
     &:first-of-type {
       margin-top: 0 !important;
     }
+  }
+  .year.niveau{
+     max-width: 6em; 
+     border-radius: 0px;
+
   }
   .year.titre{
     font-size: 1.5em;

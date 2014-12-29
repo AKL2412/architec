@@ -43,6 +43,35 @@
 	      		}*/
   		}
 	})
+
+	/*	========= filieres ===================*/
+	.when('/filiere/:id',{
+		controller : 'filiereCtrl',
+		templateUrl:'partials/filiere.php',
+		resolve:{
+      			'FormationServiceInProgrammeData':function(FormationService){
+	        		return FormationService.promise;
+	      		},
+	      		'FiliereServiceData':function(FiliereService){
+		        	return FiliereService.promise;
+	      		}
+  		}
+	})
+	/*	========= filiere-programmes ===================*/
+	.when('/filiere-programmes/:id',{
+		controller : 'filiereProgramme',
+		templateUrl:'partials/filiere-programmes.php',
+		resolve:{
+      			'ProgrammeFiliereServiceInProgrammeData':function(filiereProgrammeService){
+	        		return filiereProgrammeService.promise;
+	      		},
+	      		'FiliereServiceData':function(FiliereService){
+		        	return FiliereService.promise;
+	      		}
+  		}
+	})
+	
+
 	/*	========= parascolaires ===================*/
 	.when('/parascolaire',{
 		controller : 'parascolaire',

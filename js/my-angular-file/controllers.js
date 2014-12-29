@@ -1,8 +1,49 @@
 (function(){
-app.controller("modalCtrl", function ($http) {
+
+
+app.controller("modalCtrl", function ($scope,$http,filiereProgrammeService,FiliereService) {
   this.gallery = function(rubrique){
     var container = modalBox();
-    container.html(rubrique);
+   container.html(rubrique);
+   if(rubrique == 'sport'){
+      $http.get('partials/gallery/sport.php').
+     success(function(data, status, headers, config) {
+    container.html(data);
+
+  }).
+  error(function(data, status, headers, config) {
+    container.html(data);
+  });
+   }else if(rubrique == 'Séminaire'){
+    $http.get('partials/gallery/visite.php').
+     success(function(data, status, headers, config) {
+    container.html(data);
+
+  }).
+  error(function(data, status, headers, config) {
+    container.html(data);
+  });
+   }
+    
+  },
+  this.zoomable = function($event){
+    var img = $('<img class="zoomabl" src="'+$($event.currentTarget).attr('src')+'">');
+    var container = modalBox();
+    container.html(img);
+  },
+  this.detailFiliere = function(idFiliere){
+    var filiere = FiliereService.getFiliereById(idFiliere);
+    var container = modalBox();
+
+    $http.get('partials/filiere-programmes.php').
+     success(function(data, status, headers, config) {
+    container.html(data);
+
+  }).
+  error(function(data, status, headers, config) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
   },
   this.detailFormation = function(url){
     var container = modalBox();
@@ -63,6 +104,7 @@ app.controller("notFound",['$scope', '$routeParams', function ($scope,$routePara
 }]);
 
 app.controller("home", function ($scope,FormationService) {
+  goTop();
   $('#page-top .top-link').removeClass('active');
   $('#page-top .top-link.home').addClass('active');
   $('html title').text($('html title').text().split("--")[0]);
@@ -73,6 +115,7 @@ app.controller("aPropos", function () {
   $('#page-top .top-link').removeClass('active');
   $('#page-top .top-link.a-propos').addClass('active');
   $('html title').text($('html title').text().split("--")[0]+" -- A propos d'Architec");
+  goTop();
 });
 
 /*	========== programme =================*/
@@ -81,24 +124,58 @@ app.controller("programme", function ($scope,FormationService,FiliereService) {
   $('#page-top .top-link.programme').addClass('active');
   $('html title').text($('html title').text().split("--")[0]+' -- Programmes');
  $scope.formations = FormationService.getFormations();
+ goTop();
+});
+  /*  ========== filiereProgramme =================*/
+app.controller("filiereProgramme", function ($scope,filiereProgrammeService,FiliereService,$routeParams) {
+  goTop();
+   var filiere = FiliereService.getFiliereById($routeParams.id);
+    if(filiere == null)
+      window.location.href = '#/not-found?code:'+$routeParams.id;
+    $scope.filiere = filiere;
+    $scope.programme = filiereProgrammeService.getProgramme(filiere.id);
+    $('#page-top .top-link.programme').addClass('active');
+  $('html title').text($('html title').text().split("--")[0]+' -- '+filiere.nom);
+});
+/*  ========== programme =================*/
+app.controller("filiereCtrl", function ($scope,FormationService,FiliereService,$routeParams) {
+
+  var filiere = FiliereService.getFiliereById($routeParams.id);
+  $('#page-top .top-link').removeClass('active');
+  $('#page-top .top-link.programme').addClass('active');
+    if(filiere == null)
+      window.location.href = '#/not-found?code:'+$routeParams.id;
+    var formation = FormationService.getFormationById(filiere.formation);
+    
+    $scope.filiere = filiere;
+    $scope.formations = formation;
+    $('html title').text($('html title').text().split("--")[0]+' -- '+filiere.nom);
+    goTop();
+  /*$('html title').text($('html title').text().split("--")[0]+' -- Programmes');
+ $scope.formations = FormationService.getFormations();*/
 });
 /*	========== contact =================*/
 app.controller("contact", function () {
+  goTop();
   $('#page-top .top-link').removeClass('active');
   $('#page-top .top-link.contact').addClass('active');
   $('html title').text($('html title').text().split("--")[0]+' -- Nous contacter');
 });
 /*	========== parascolaire =================*/
 app.controller("parascolaire", function () {
+  goTop();
   $('#page-top .top-link').removeClass('active');
   $('#page-top .top-link.parascolaire').addClass('active');
   $('html title').text($('html title').text().split("--")[0]+' -- Parascolaire');
 });
 
+
+
   /*	========== actualite =================*/
 app.controller("actualite", function ($scope,ArticlesService,$routeParams) {
   $('#page-top .top-link').removeClass('active');
   $('html title').text($('html title').text().split("--")[0]+' -- Actualites');
+  goTop();
   var lengthElement = 4;
   var page = 0;
   var nbrePage = parseInt(ArticlesService.doStuff().length/lengthElement);
@@ -119,6 +196,7 @@ app.controller("actualite", function ($scope,ArticlesService,$routeParams) {
 
 /*	========== actualiteLire =================*/
 app.controller("actualiteLire", function ($scope,ArticlesService,ArticleService,$routeParams) {
+  goTop();
   $('#page-top .top-link').removeClass('active');
   //$('#page-top .top-link.actualiteLire').addClass('active');
   var code = $routeParams.code;

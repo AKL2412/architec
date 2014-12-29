@@ -1,5 +1,10 @@
 (function(){
 
+	$('.zoomable').click(function(e){
+		//var c = modalBox();
+		//c.html($(this));
+		alert(456)
+	});
 	$(window).scroll(onscroll);
 	onscroll = function() {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -51,6 +56,11 @@ function explose(str){
 	chaine += tab[tab.length-1];
 	
 	return chaine;
+}
+function goTop(){
+	$('html, body').animate({  
+        scrollTop:0  
+    }, 100);
 }
 /*function reload(){
 	$('script').each(function() {

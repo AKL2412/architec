@@ -8,13 +8,44 @@
 <div class="row nos-formations">
 	<div class="col-md-6 col-sm-6 formations formation-initiale">
 		<h1>Formation Initiale</h1>
-		<div class="col-md-6" ng-repeat="formation in formations">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					{{formation.nom}}
-				</div>
-				<div class="panel-footer">{{formation.filieres.length}}</div>
-			</div>
+		<div class="col-md-12" ng-repeat="formation in formations">
+
+		 <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3>Formation : {{formation.nom}}</h3>
+                            <div class="row">
+                                <div class="col-xs-12 text-right">
+                                    <div class="huge">{{formation.filieres.length}}</div>
+                                    <div>Filière(s)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                        	<div class="uneFiliere" ng-repeat="filiere in formation.filieres">
+                        		<a href="#/filiere/{{filiere.id}}" >
+                        			<h4>
+                        			{{filiere.nom}}
+                        			<span ng-show="filiere.accredite" style="font-size:16px" 
+                        		class="pull-right label label-success">
+                        		<i class="fa-check-circle fa"></i>
+                        		</span>
+                        			</h4>
+
+                        		</a>
+
+                        		<blockquote>
+                        			{{filiere.description | limitTo : 50}} ...
+                        		</blockquote>
+                        	</div>
+                        </div>
+                        <a  href="">
+                            <div class="panel-footer">
+                                <span class="pull-left">Voir Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
 		</div>
 		
 	</div>
@@ -26,7 +57,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="circle-body">
-					<img src="css/image/coffre-info.jpg">
+					<img class="zoomable" ng-click="modal.zoomable($event)" src="css/image/coffre-info.jpg">
 				</div>
 				<h4 class="text-center">
 					Infographie
@@ -39,7 +70,7 @@
 			<div class="col-md-4">
 				<div class="circle-body">
 					
-						<img src="css/image/dessin-bat-cof.jpg">
+						<img class="zoomable" ng-click="modal.zoomable($event)" src="css/image/dessin-bat-cof.jpg">
 					
 				</div>
 				<h4 class="text-center">
