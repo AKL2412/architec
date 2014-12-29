@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>7.3</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <AutoPlayVideo>false</AutoPlayVideo>
+            <Captions>true</Captions>
+            <CaptionsEffect>parallax</CaptionsEffect>
+            <Controls>true</Controls>
+            <FullScreen>false</FullScreen>
+            <GalleryName>dessin-batiment</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>slices</ImageEffect>
+            <ImageFillColor>#000000</ImageFillColor>
+            <ImageHeight>360</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/transparent/</ImageTemplate>
+            <ImageTemplateName>Transparent</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/Junior Aby/Documents\WOW Slider/index.html</PublishFileName>
+            <PublishIndex>index.html</PublishIndex>
+            <PublishPath>C:/Users/Junior Aby/Documents\WOW Slider</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>1</ShowBullets>
+            <ShowControls>false</ShowControls>
+            <ShowTooltips>1</ShowTooltips>
+            <SizeStyle>2</SizeStyle>
+            <SlideshowDelay>20</SlideshowDelay>
+            <SlideshowDuration>20</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <SwipeSupport>2</SwipeSupport>
+            <TemplateFont>Anton</TemplateFont>
+            <TemplateName>transparent</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>false</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>0</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/wamp/www/architec/css/image/dessin-de-batiment/12291654_web-droite.png</url>
+                <filesize>279138</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/css/image/dessin-de-batiment/dessinateur-en-batiment-poitiers.jpg</url>
+                <filesize>83667</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/css/image/dessin-de-batiment/illkatbatiment.jpg</url>
+                <filesize>93922</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/css/image/dessin-de-batiment/PLAN-GENERAL.jpg</url>
+                <title>PLAN-GENERAL</title>
+                <filesize>348004</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/css/image/dessin-de-batiment/RDC.JPG</url>
+                <title>RDC</title>
+                <filesize>213645</filesize>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

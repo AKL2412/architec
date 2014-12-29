@@ -1,0 +1,177 @@
+/* line 3, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique {
+  line-height: 1;
+  font-family: inherit, sans-serif;
+  /* --------------------- top bar for quick jump to the years "Jumpstrip"----------------- */
+  /* -------------- end "Jumpstrip"----- Start Timeline--------------- */
+  /*----------- Main Content Elements ---------------- */
+}
+/* line 6, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique div, #chronologique span, #chronologique applet, #chronologique object, #chronologique iframe,
+#chronologique h1, #chronologique h2, #chronologique h3, #chronologique h4, #chronologique h5, #chronologique h6, #chronologique p, #chronologique blockquote, #chronologique pre,
+#chronologique a, #chronologique abbr, #chronologique acronym, #chronologique address, #chronologique big, #chronologique cite, #chronologique code,
+#chronologique del, #chronologique dfn, #chronologique em, #chronologique img, #chronologique ins, #chronologique kbd, #chronologique q, #chronologique s, #chronologique samp,
+#chronologique small, #chronologique strike, #chronologique strong, #chronologique sub, #chronologique sup, #chronologique tt, #chronologique var,
+#chronologique b, #chronologique u, #chronologique i, #chronologique center,
+#chronologique dl, #chronologique dt, #chronologique dd, #chronologique ol, #chronologique ul, #chronologique li,
+#chronologique fieldset, #chronologique form, #chronologique label, #chronologique legend,
+#chronologique table, #chronologique caption, #chronologique tbody, #chronologique tfoot, #chronologique thead, #chronologique tr, #chronologique th, #chronologique td,
+#chronologique article, #chronologique aside, #chronologique canvas, #chronologique details, #chronologique embed,
+#chronologique figure, #chronologique figcaption, #chronologique footer, #chronologique header, #chronologique hgroup,
+#chronologique menu, #chronologique nav, #chronologique output, #chronologique ruby, #chronologique section, #chronologique summary,
+#chronologique time, #chronologique mark, #chronologique audio, #chronologique video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* line 26, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique article, #chronologique aside, #chronologique details, #chronologique figcaption, #chronologique figure,
+#chronologique footer, #chronologique header, #chronologique hgroup, #chronologique menu, #chronologique nav, #chronologique section {
+  display: block;
+}
+/* line 31, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique ol, #chronologique ul {
+  list-style: none;
+}
+/* line 34, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique blockquote, #chronologique q {
+  quotes: none;
+}
+/* line 37, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique blockquote:before, #chronologique blockquote:after,
+#chronologique q:before, #chronologique q:after {
+  content: '';
+  content: none;
+}
+/* line 42, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 51, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique #jumpstrip li {
+  display: block;
+}
+/* line 54, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique #jumpstrip {
+  float: left;
+  margin-top: 25px;
+  font-size: 16px;
+  font-family: inherit, sans-serif;
+  color: black;
+  padding-left: 25px;
+  clear: both;
+  padding-bottom: 25px;
+}
+/* line 64, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique #jumpstrip li {
+  position: relative;
+  float: left;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 71, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique #jumpstrip li a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  padding-top: 20px;
+  color: black;
+  border-bottom: 5px solid transparent;
+  /* if making for IE 6 transparent won't work.  See http://snippets.dzone.com/posts/show/6089 for solution */
+}
+/* line 80, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique #jumpstrip li a:hover {
+  color: green;
+  border-bottom: 5px solid #22241C;
+}
+/* line 85, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique #timewrap {
+  padding-left: 50px;
+  max-width: 90%;
+  float: left;
+}
+/* line 90, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline a, #chronologique .entry a, #chronologique .entry {
+  text-decoration: none;
+  color: black;
+}
+/* line 91, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline li a:hover {
+  text-decoration: none;
+}
+/* line 94, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline li,
+#chronologique .timeline ol li {
+  list-style: none;
+}
+/* line 99, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline,
+#chronologique .timeline ol,
+#chronologique .timeline ol ol {
+  margin: 0;
+  padding: 0;
+}
+/* line 105, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline ol li {
+  padding: 0 0 0 50px;
+  margin: 0 0 0 50px;
+}
+/* line 109, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline li a {
+  position: relative;
+  top: -50px;
+}
+/* line 113, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline li div.entry {
+  padding: 20px;
+  margin: 0;
+  border-style: none;
+}
+/* line 118, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline li a .entry:hover, #chronologique .timeline .entry:hover {
+  background-color: #e8e8e8;
+  text-decoration: none;
+  color: black;
+}
+/* line 123, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline ol li {
+  background: url("image/org-tree-mid.gif") no-repeat left top;
+}
+/* line 127, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .timeline ol li.last {
+  background: url("image/org-tree-last.gif") no-repeat left top;
+}
+/* line 131, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .date {
+  font-style: italic;
+}
+/* line 132, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .year {
+  /* this is the year on the left side.  If you decide to add a month or other content, adjustments will need to be made. */
+  font-weight: bold;
+  display: block;
+  position: relative;
+  /* for browser (IE) compatability */
+  width: 75px;
+  border-bottom: 2px solid #666666;
+  font-size: 1.6em;
+  right: 125px;
+}
+/* line 141, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .title {
+  padding: 0 0 10px 0;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6em;
+}
+/* line 147, ../compass/sass/aTimeLineHistorique.scss */
+#chronologique .history {
+  /* I didn't really style this, it is here for posterity. */
+  font-family: inherit;
+}

@@ -1,0 +1,384 @@
+@import "compass";
+/*========== Body =====================*/
+body{
+	background-color: #fff;
+	
+	/*================= page-top ==========================*/
+	#page-top{
+		
+		border-bottom: 5px solid #ca010c;
+		width: 100%;
+		padding: 2% 0 0% 0;
+		background-color: #f8f8f8; /*#76c7c1;*/
+		
+		position: fixed;
+		z-index: 220;
+		top: 0;left: 0;
+		@include box-shadow(0 2px 4px rgba(0,0,0,0.2));
+		.navbar{
+			margin: 0;
+			a.navbar-brand{
+				margin-top: -25px;
+				text-align: center;
+				img{
+					display: inline-block;
+				}
+				span{
+					display: block;
+					color: rgba(0,0,0,0.5);
+					font-size: 0.8em;
+					font-family: "Trebuchet MS";
+				}
+			}
+			button.navbar-toggle{
+				background-color:  #f8f8f8;
+				.icon-bar{
+					background-color: #000;
+					color: #000;
+					border-color: #000;
+				}
+			}
+		}
+		.les-liens{
+			margin-top: 5px;
+			li.top-link{
+				a:first-child{
+					border-bottom:5px solid #f8f8f8;
+					text-transform: uppercase;
+					background-color:transparent;
+				}
+				div.contenu{
+					position: fixed;
+					width: 100%;
+
+					height: 0;
+					left: 0;
+					overflow: hidden;
+					@include transition-duration(0.5s);
+					background-color: rgba(0,0,0,0.9);
+					z-index: 210;
+					margin-top: 3px;
+
+					.container{
+						overflow: auto;
+						padding: 30px 20px;
+						color: rgba(0,0,0,0.7);
+						background-color: #f5f5f5;
+						margin-top: 10px;
+						height: auto;
+						overflow: auto;
+					}
+				}
+				&:hover{
+					background-color:transparent;
+					div.contenu{
+						height: 350px;
+					}
+					a:first-child{
+						border-bottom:5px solid #76c7c1;
+						color:#86c53d;
+						background-color:transparent;
+					}
+				}
+				&:active{
+					background-color:transparent;
+					a:first-child{
+						background-color:transparent;
+					}
+				}
+			}
+			li.top-link.active{
+					a:first-child{
+						color:#ca010c;/*#86c53d;*/
+						font-weight: bolder;
+					}
+			}
+		}
+	}
+	/*================= block-message =====================*/
+	.block-message{
+		font-family: "Trebuchet MS";
+		width: 400px;
+		height: 200px;
+		z-index: 100;
+		overflow: auto;
+		padding: 1px;
+		@include box-shadow(0 2px 3px rgba(0,0,0,0.2));
+		p{
+			position: relative;
+			padding: 30px;
+			text-align: justify;
+			color: #fff;
+			z-index: 205;
+		}
+
+		&:before{
+			display:block;
+			content: '';
+			background-color: rgba(0,0,0,1);
+			position: absolute;
+			width: inherit;
+			height: inherit;
+			opacity: 0.6;
+		}
+	}
+	/*====================footer ============================*/
+
+	footer{
+		width: 100%;
+		min-height: 300px;
+		background-color: #110022;
+		color: #ddccee;
+		padding: 20px 0;
+	}
+	/*================= Not found page ==================*/
+	.not-found-msg{
+		background-color: rgba(0,0,0,0.9);
+		.error{
+			text-align: center;
+			color: #86c63c;
+			font-family: "Trebuchet MS";
+			font-size: 5em;
+			text-shadow:0 0px 7px #89ff03;
+		}
+		.msg{
+			color: #89ff03;
+			text-align: center;
+		}
+	}
+/*	================== content main =====================*/
+	.principal-row{
+		margin-top: 150px;
+		margin-bottom: 15px;
+	}
+
+	/*================= map ===================*/
+	.map-architec{
+		iframe{
+			width: 100%;
+			height: 300px;
+		}
+	}
+
+	/*=============== image-page ================*/
+	.image-page{
+		height: 200px;
+		margin-top: -10px;
+		background-color: rgba(0,0,0,0.5);
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+		overflow: hidden;
+		.titre{
+			display: inline-block;
+			background-color: rgba(255,255,255,0.5);
+			@include border-radius(5px);
+			padding: 10px; 
+			color:#1e1f5e;
+			font-weight: bolder;
+			text-transform: uppercase;
+			font-size: 2em;
+			float: right;
+			position: absolute;
+			z-index: 100;
+			margin-left: 4%;
+			margin-top: 10px;
+
+		}
+		.titre.black{
+			background-color: rgba(0,0,0,0.4);
+			color:#fff;
+		}
+	}
+	.image-page.programme{
+		background: url(image/progamme.jpg) no-repeat;
+		background-size: 100%;
+	}
+	.image-page.not-found{
+		background: url(image/not-found.jpg) no-repeat;
+		background-size: 100%;
+	}
+	.image-page.a-propos{
+		background: url(image/iam.png) no-repeat center center;
+		background-size: 180px;
+		.titre{
+			text-transform: lowercase;
+			margin-top: 25px;
+			span{
+				text-transform: uppercase;
+				font-weight: bolder;
+				color: #ca010c;
+			}
+			.iam{
+				color:#89ff03;
+				text-align: center;
+			}
+		}
+	}
+	.image-page.parascolaire{
+		
+	}
+	/*============= actualite =======================*/
+	.actualite{
+		background-color: #f9f9f9;
+		padding: 15px 0;
+		.actua{
+			background-color: #fff;
+			padding: 8px;
+			margin: 10px 0;
+			h4{
+				min-height: 80px;
+			}
+		}
+	}
+
+	/*================ mypagination ===============*/
+	.mypagination{
+		text-align: center;
+		nav{
+			display: inline-block;
+		}
+	}
+
+	/*============= Design home page =================*/
+	.circle-body{
+		img{
+			width: 100%;
+		}
+		img.logo{
+			position: absolute;
+			width: 50px;
+			opacity: 0.5;
+		}
+	}
+	.h-circle-body{
+		border:4px solid #ca010c;
+		height: 130px;
+		width: 130px;
+		display: inline-block;
+		line-height: 130px;
+		@include border-radius(50%);
+		background-color: rgba(0,0,0,0.1);
+		i{
+			margin-top: 30px;
+			color:#86c53d;
+		}
+	}
+
+	/*=============== Boite modale ==================*/
+	#modal{
+		display: block;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 500;
+		
+		.back{
+			width: 100%;
+			height: 100%;
+			left: 0;top: 0;
+			background-color: rgba(0,0,0,0.8);
+			position: absolute;
+		}
+		.rows{
+			position: relative;
+			z-index: 120;
+			padding: 6% 0;
+			height: 100%;
+			overflow: auto;
+			width: 101%;
+			.main{
+				.closer{
+					float: right;
+					margin-right: 6%;
+					font-size: 1.5em;
+					color: #f1f1f1;
+					margin-top: -3%;
+					cursor: pointer;
+				}
+				.container{
+				background-color: #fff;
+				height: 30%;
+				padding: 3%;
+				margin-bottom: 6%;
+				}
+			}
+		}
+	}
+	/*================ tabs ========================*/
+	.menu-tabs{
+		padding: 10px;
+		ul{
+			margin: 0;padding: 0;
+			li{
+				list-style: none;
+				a{
+					text-decoration: none;
+					color: rgba(0,0,0,0.6);
+					@include transition-duration(0.2s);
+					&:hover{
+						color:rgba(0,0,0,0.9);
+		 			margin-left: 5px;
+						font-weight: bolder;
+					}
+
+				}
+				&:active{
+					a{
+						color: #00b5ef;
+					}
+				}
+			}
+			li.active{
+				a{
+					color:rgba(0,0,0,0.9);
+					margin-left: 5px;
+					font-weight: bolder;
+				}
+				&:after{
+					content: ' > ';
+					font-weight: bolder;
+					color: #ca010c;
+				}
+			}
+		}
+	}
+	.content-tabs{
+		.content-t{
+			padding: 20px 0px;
+			display: none;
+			.titre-part{
+				border-left: 4px solid #ca010c;
+				text-indent: 10px;
+				font-weight: bolder;
+				font-size: 1.5em;
+				text-decoration: underline;
+				padding: 8px 0;
+				margin-bottom: 8px;
+			}
+		}
+	}
+	/*============== css about image ===============*/
+	img.full-width{
+		display: block;
+		width: 100%;
+	}
+
+	/*============== nos-formations | Les programmes ==============*/
+	.nos-formations{
+		.formations{
+
+		}
+		.formation-initiale{
+
+		}
+		.formation-continue{
+
+		}
+	}
+
+	/*================ slider-modal =====================*/
+	.slider-modal{
+		margin-bottom: 30px;
+	}
+}

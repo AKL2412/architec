@@ -1,0 +1,14 @@
+/*========== Body =====================*/
+/* line 3, ../sass/app.scss */
+body {
+  /*================= block-message =====================*/
+}
+/* line 6, ../sass/app.scss */
+body .block-message {
+  font-family: "Trebuchet MS";
+}
+/* line 9, ../sass/app.scss */
+body .block-message:before {
+  display: block;
+  content: '123';
+}

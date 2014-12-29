@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>7.3</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <AutoPlayVideo>false</AutoPlayVideo>
+            <Captions>true</Captions>
+            <CaptionsEffect>parallax</CaptionsEffect>
+            <Controls>true</Controls>
+            <FullScreen>false</FullScreen>
+            <GalleryName>first-project</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>cube,rotate,domino</ImageEffect>
+            <ImageFillColor>#000000</ImageFillColor>
+            <ImageHeight>360</ImageHeight>
+            <ImageQuality>100</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/easy/</ImageTemplate>
+            <ImageTemplateName>Easy</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/wamp/www/architec/index.html</PublishFileName>
+            <PublishIndex>index.html</PublishIndex>
+            <PublishPath>C:/wamp/www/architec</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>1</ShowBullets>
+            <ShowControls>false</ShowControls>
+            <ShowTooltips>1</ShowTooltips>
+            <SizeStyle>2</SizeStyle>
+            <SlideshowDelay>50</SlideshowDelay>
+            <SlideshowDuration>22</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <SwipeSupport>2</SwipeSupport>
+            <TemplateFont>Exo 2</TemplateFont>
+            <TemplateName>easy</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>false</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>0</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/wamp/www/architec/image/food-q-c-750-300-1.jpg</url>
+                <title>Les contacts</title>
+                <description>Tout sur les contacts</description>
+                <userurl>#/contact</userurl>
+                <usertarget>_self</usertarget>
+                <filesize>36937</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/image/food-q-c-750-300-3.jpg</url>
+                <title>food-q-c-750-300-3</title>
+                <filesize>27586</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/image/food-q-c-750-300-4.jpg</url>
+                <title>food-q-c-750-300-4</title>
+                <filesize>25265</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/image/food-q-c-750-300-5.jpg</url>
+                <title>food-q-c-750-300-5</title>
+                <filesize>26839</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/image/food-q-c-750-300-6.jpg</url>
+                <title>food-q-c-750-300-6</title>
+                <filesize>37791</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/image/food-q-c-750-300-7.jpg</url>
+                <title>food-q-c-750-300-7</title>
+                <filesize>27604</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/image/food-q-c-750-300-8.jpg</url>
+                <title>food-q-c-750-300-8</title>
+                <filesize>21035</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/image/food-q-c-750-300-9.jpg</url>
+                <title>food-q-c-750-300-9</title>
+                <filesize>20874</filesize>
+            </Image>
+            <Image>
+                <url>C:/wamp/www/architec/image/food-q-c-750-300-10.jpg</url>
+                <title>food-q-c-750-300-10</title>
+                <filesize>37166</filesize>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

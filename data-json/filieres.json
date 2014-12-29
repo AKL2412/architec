@@ -1,0 +1,35 @@
+[
+	{
+		"id": 1,
+	    "nom": "Conducteur de travaux",
+	    "accredite":true,
+	    "formation":2,
+	    "date-creation":"2014-11-17",
+	    "description": "Le conducteur de travaux est un homme de terrain responsable de plusieurs chantiers. Il contrôle toutes les étapes du chantier, depuis l’étude du dossier technique jusqu’à la réception des travaux.Il assure la phase de préparation, alloue les moyens necéssaires et définit le calendrier d'exécution des travaux. Il est responsable de la qualité des travaux effectués, de la tenue des délais et du respect du budget."
+	},
+	{
+	"id": 2,
+    "nom": "Dessinateur de batiments",
+    "formation":2,
+    "accredite":true,
+    "date-creation":"2004-11-17",
+    "description": "Le dessinateur en bâtiment exerce son activité en cabinet d’architecte, bureau d’études techniques ou administrations de génie civile. Il établit les plans de construction à usage d’habitation (maison individuelle ou immeuble collectif) et en fait la description."
+	},
+	{
+	"id": 3,
+    "nom": "Infographie",
+    "formation":2,
+    "accredite":false,
+    "date-creation":"2004-11-17",
+    "description": "L’infographiste est l’assistant technicien qui, en collaboration du concepteur et producteur en communication, est chargé de l’illustration et de la mise en page de documents, du traitement de l’image numérique et du flashage dans une agence de communication, presse, imprimerie, TV, cinéma…."
+},
+{
+		"id": 4,
+	    "nom": "Gestion informatisée",
+	    "accredite":true,
+	    "formation":1,
+	    "date-creation":"2014-11-17",
+	    "description": "Le conducteur de travaux est un homme de terrain responsable de plusieurs chantiers. Il contrôle toutes les étapes du chantier, depuis l’étude du dossier technique jusqu’à la réception des travaux.Il assure la phase de préparation, alloue les moyens necéssaires et définit le calendrier d'exécution des travaux. Il est responsable de la qualité des travaux effectués, de la tenue des délais et du respect du budget."
+	}
+
+]
