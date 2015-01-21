@@ -49,7 +49,7 @@
 </p>
 <div class="map-architec">
 	<iframe 
-	src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3397.6386800294295!2d-8.051712000000002!3d31.616358999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafe9319d73f3b1%3A0x3e3679313096f656!2sLyc%C3%A9e+Al+Khawarizmi+I!5e0!3m2!1sfr!2s!4v1419003075284" 
+	src="https://maps.google.com/maps?q=31.648956,-7.995241&amp;num=1&amp;ie=UTF8&amp;ll=31.649436,-7.995649&amp;spn=0.002854,0.005284&amp;t=m&amp;z=14&amp;iwloc=near&amp;output=embed" 
 	frameborder="0" style="border:0">
 	</iframe>
 </div>

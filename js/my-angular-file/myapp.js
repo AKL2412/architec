@@ -28,10 +28,15 @@
 	/*	========= search ===================*/
 	.when('/search',{
 		controller : 'formseachCtrl',
-		templateUrl:'partials/search.php'
+		templateUrl:'partials/search.php',
+		resolve:{
+      			'SearchingData':function(SearchingService){
+	        		return SearchingService.promise;
+	      		}
+  		}
 	})
 	/*	========= programmes ===================*/
-	.when('/programmes',{
+	.when('/formations',{
 		controller : 'programme',
 		templateUrl:'partials/programme.php',
 		resolve:{
@@ -43,7 +48,19 @@
 	      		}*/
   		}
 	})
-
+	/*	========= Preinscription ===================*/
+	.when('/preinscription',{
+		controller : 'preinscription',
+		templateUrl:'partials/preinscription.php',
+		resolve:{
+      			'FormationServiceInProgrammeData':function(FiliereService){
+	        		return FiliereService.promise;
+	      		}/*,
+	      		'FiliereServiceData':function(FiliereService){
+		        	return FiliereService.promise;
+	      		}*/
+  		}
+	})
 	/*	========= filieres ===================*/
 	.when('/filiere/:id',{
 		controller : 'filiereCtrl',

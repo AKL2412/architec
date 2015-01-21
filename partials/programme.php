@@ -85,7 +85,7 @@
 	</div>
 </div>
 	<!-- {{formations}}
-	▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+	▼▼▼▼▼▼▼▼▼▼▼▼▼ 
 
 	<div class="row" id="timeline-planning">
 		<div class="timeline">
@@ -96,7 +96,7 @@
         <li style="width: 85.5%; left: 14.2%;">Web Development <em>(2004 - 2009)</em></li>
         <li style="width: 42.75%; left: 0;">3D Modeling and Rendering <em>(2003 - 2006)</em></li>
         <li style="width: 99.5%; left: 0;">Drawing &amp; Illustration <em>(2003 - 2009)</em></li>
-    </ul> <!-- end .events -->
+    </ul> 
 
     <ul class="intervals">
         <li class="first">2003</li>
@@ -106,7 +106,7 @@
         <li>2007</li>
         <li>2008</li>
         <li class="last">2009</li>
-    </ul> <!-- end .intervals -->
-</div> <!-- end .timeline -->
-	</div>
+    </ul> 
+</div> 
+	</div>-->
 </div>

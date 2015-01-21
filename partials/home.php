@@ -9,10 +9,10 @@
 </head>
 <body >
 	
-	<div class="container">
+	
 	<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
 	<div class="row">
-		<div id="wowslider-container1">
+		<div id="wowslider-container1" >
     <div class="ws_images"><ul>
         <li><img src="sliders/home/data1/images/banner1.jpg" alt="Formation : Technicien Spécialisé" title="Formation : Technicien Spécialisé" id="wows1_0"/></li>
         <li><a href="http://wowslider.com/vf"><img src="sliders/home/data1/images/banner2.jpg" alt="Formation :Technicien" title="Formation :Technicien" id="wows1_1"/></a>Technicien Spécialisé en dessin de batiment</li>
@@ -27,66 +27,26 @@
     </div>
 	</div>
 <hr>
-	<!-- <div class="row">
-		 <div class="myTimeline">
-    			
-    			<h1 class='padd'>Architec </h1>
-    			<ul class='timeline'>
-    			  <li class="year first">
-    			  	Nos Progammes <br>
-    			  	<img src="css/image/logo-bl-transp.png" width="40" />
-    			  </li> 
-    			  <li class="year first">2013</li>
-    			  <li class='event offset-first'>
-    			    Something amazing happened today, but it's a secret
-    			  </li>
-    			  <li class='event' href="#">
-    			    Timeline.css is <b>dynamic</b>, <b>responsive</b> and optimized to <b>demonstrate events</b> in your life in a <b>simple and clear</b> way
-    			  </li>
-    			  <li class="event">
-    			    <a href="http://christian-fei.com" title="christian fei">
-    			    made with &lt;3 by <img src="https://s3-eu-west-1.amazonaws.com/cf.img/var/face.svg" alt="christian fei"/>
-    			    </a>
-    			  </li>
-    			  <li class="event">
-    			  <a href="http://codepen.io/christian-fei/pen/BJily">
-    			    Open source project on codepen.io
-    			    <img src="css/image/iam.png" alt=""/>
-    			  </a>
-    			  </li>
-    			  <li class='event'>
-    			    Look, a sleepy kitten: <br/>
-    			    <img src="css/image/logo-bl-transp.png" width="80" />
-    			    <a href='http://ih2.redbubble.net/image.10311838.0354/flat,550x550,075,f.jpg'>
-    			    &copy; 2014 IAM</a>
-    			  </li>
-    			  <li class="year">2012</li>
-    				<li class="event offset-first">
-    					<p>To infinity  ... </p>
-    			    <img class='centered' src="http://upload.wikimedia.org/wikipedia/en/7/75/Buzz-lightyear-toy-story-3-wallpaper.jpg" alt=""/>
-    					<a href='http://upload.wikimedia.org/wikipedia/en/7/75/Buzz-lightyear-toy-story-3-wallpaper.jpg'>&copy;</a>
-    				</li>
-    				<li class="event">
-    					<p>... and beyond!</p>
-    			    <img class='centered' src="http://brandstyle.com.br/wp-content/uploads/2012/05/Woody-7.jpg" alt=""/>
-    					<a href='http://brandstyle.com.br/wp-content/uploads/2012/05/Woody-7.jpg'>&copy;</a>
-    				</li>
-    			</ul>
 
-		</div> 
-	</div> -->
-
-	<!-- <div class="row">
-		<div class="myTimeline">
-			<ul class='timeline'>
-  				<li class="year titre">Nos Formation</li>
-  				<li ng-repeat="form in formations" class="event">
-  					{{form.nom}}
-  				</li>
-  			</ul>
-		</div>
-	</div> -->
-
+<div class="container">
+   <!--  <div class="row">
+        <div id="slogan">
+            <div class="titres">
+                <div class="unTitre">
+                    <i class="fa fa-leaf fa-5x  icon-set"></i>
+                    <span>Se former</span>
+                </div>
+                <div class="unTitre">
+                    <i class="fa fa-paper-plane-o fa-5x  icon-set"></i>
+                    <span>PROGRESSER</span>
+                </div>
+                <div class="unTitre">
+                    <i class="fa fa-thumbs-o-up fa-5x  icon-set"></i>
+                    <span>S'éPANOUIR</span>
+                </div>
+            </div>
+        </div>
+    </div> -->
 	<div class="row">
 		
 		<div class="row main-low-margin text-center">
@@ -102,7 +62,7 @@
             <div class="col-md-4 col-sm-4">
                 <div class="h-circle-body">
                 <i class="fa fa-paper-plane-o fa-5x  icon-set"></i></div>
-                <h3>PROGESSER</h3>
+                <h3>PROGRESSER</h3>
                 <p class="text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.

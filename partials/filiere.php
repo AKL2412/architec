@@ -1,17 +1,24 @@
 <div class="row image-page filiere">
 	<div class="titre">
 			{{filiere.nom}}
+			<div class="roow">
+		<p class="label label-danger" style="font-size:16px">
+		 {{formations.nom}}
+	</p>
+
 	</div>
+	</div>
+
 </div>
 <div class="row" >
 	<div class="container">
 	<div class="col-md-4">
-	<div class="row">
+	<!-- <div class="row">
 		<p class="label label-danger" style="font-size:16px">
 		Formation : {{formations.nom}}
 	</p>
 
-	</div>
+	</div> -->
 	<br/>
 		<div class="row">
 			<div class="list-group">

@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="sliders/dessin-de-batiment/engine1/jquery.js"></script>
 </head>
 <body>
-<h1>Dessin en <b>timent</b></h1>
+<h1>Dessin en <b>batiment</b></h1>
 <div class="row slider-modal">
 	<div id="wowslider-container1">
 	<div class="ws_images"><ul>

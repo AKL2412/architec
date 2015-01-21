@@ -71,6 +71,33 @@ app.factory('ArticleService',function($http){
 
 	});
 
+/*==================== les professeurs ============================*/
+app.factory('ProfesseurService',function($http){
+		var professeurs = null;
+
+	    var promise = $http.get('data-json/professeurs.json').success(function (data) {
+	      professeurs = data;
+	    });
+
+	    return {
+	      promise:promise,
+	      setData: function (data) {
+	          professeurs = data;
+	      },
+	      getContent: function (id) {
+	          var article = null;
+	          angular.forEach(professeurs,function(value,index){
+	          		if(value.article == id)
+	          			article = value;
+	          });
+	          return article;
+	      },
+	      search : function(q,array){
+	      	searching(professeurs,['matricule','nom','prenom','email','presentation','genre'],q,"professeur",array);
+	      }
+	    };
+
+	});
 app.factory('FormationService',function($http,FiliereService){
 		var formations = null;
 	    var promise = $http.get('data-json/formation.json').success(function (data) {
@@ -98,6 +125,9 @@ app.factory('FormationService',function($http,FiliereService){
 	          		//return value;
 	          });
 	          return data;//.getSomeData();
+	      },
+	      search : function(q,array){
+	      	searching(formations,['nom','type','description'],q,"formation",array);
 	      }
 	    };
 
@@ -218,7 +248,11 @@ app.factory('ModulesService',function($http){
 	          			data = value;
 	          });
 	          return data;//.getSomeData();
+	      },
+	      search : function(q,array){
+	      	searching(modules,['nom','description'],q,"modules",array);
 	      }
+
 	    };
 
 	});
@@ -310,5 +344,31 @@ app.factory('ProgrammeService',function($http){
 	    };
 
 	});
-	
+
+/*================ Searching ===========================*/
+app.factory('SearchingService',function(ModulesService,FormationService,
+	ProfesseurService){
+		var articles = null;
+
+	    var promise = {};
+	    /* $http.get('data-json/articles-content.json').success(function (data) {
+	      articles = data;
+	    });
+//*/
+
+	    return {
+	      promise:promise,
+	      setData: function (data) {
+	          articles = data;
+	      },
+	      search: function (q) {
+	         var result = new Array();
+	         	FormationService.search(q,result);
+	          ModulesService.search(q,result);
+	          ProfesseurService.search(q,result);
+	         return result;
+	      }
+	    };
+
+	});
 })()

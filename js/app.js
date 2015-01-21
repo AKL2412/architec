@@ -62,6 +62,77 @@ function goTop(){
         scrollTop:0  
     }, 100);
 }
+
+function searching(dataArray,indexArray,searchingValue,rubrique,returnArray){
+	
+	for (var i = 0; i < dataArray.length; i++) {
+		var temp = dataArray[i];
+		for (var j = 0; j < indexArray.length; j++) {
+			var tempIndex = indexArray[j];
+			if(temp[tempIndex].toLowerCase().indexOf(searchingValue.toLowerCase()) != -1){
+				var linkt = temp.nom;
+				if(rubrique == 'professeur')
+					linkt = temp.prenom.toLowerCase()+' '+temp.nom.toUpperCase();
+				var rObj = {
+					levelIndice : j,
+					level : tempIndex,
+					rubrique : rubrique,
+					link:linkt,
+					value : temp,
+					affiche: findWrods(searchingValue,temp[tempIndex])
+				}
+				returnArray.push(rObj);
+
+				break;
+			}
+		};
+	};
+	//return returnArray;
+}
+function limiteTo(chaine,texte){
+	var index = texte.toLowerCase().indexOf(value.toLowerCase());
+	if(index < 3 ){
+		return texte.substring(0,50)+"...";
+	}
+	return texte.substring(index - 3 ,47)+"...";
+}
+function findWrods(chaine,texte){
+
+	if(texte.toLowerCase().indexOf(chaine.toLowerCase()) != -1){
+		return surLigne(chaine,texte).tex;
+	}else{
+		var tab = chaine.split(' ');
+		var r = texte;
+		for(var s in tab){
+			//console.log(tab[s]);
+			var t = surLigne(tab[s],r);
+			r = t.tex;
+			if(t.state) break;
+		}
+		return r;
+	}
+	
+}
+
+function surLigne(value,container){
+	var index = container.toLowerCase().indexOf(value.toLowerCase());
+	var find = false;
+	if( index != -1){
+		find = true;
+		var firstPart = container.substring(0,index);
+		var nvalue = container.substring(index,parseInt(value.length+index));
+		var lastPart = container.substring(parseInt(index+ value.length ) ,container.length);
+	 
+	return {
+		tex : firstPart +'<strong>'+nvalue+"</strong>"+lastPart,
+		state :find
+	};
+	}
+	return {
+		tex : container,
+		state :find
+	};
+}
 /*function reload(){
 	$('script').each(function() {
     if ($(this).attr('src') !== 'js/app.js') {

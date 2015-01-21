@@ -7,7 +7,7 @@ $bg-entry: rgb(80,80,80);
 
 .timeline {
   margin: 0px auto;
-  max-width: 50em;
+  max-width: 100%;
   overflow:hidden;
   height: auto;
   position: relative;
@@ -23,7 +23,7 @@ $bg-entry: rgb(80,80,80);
     .year {
     background: $bg-entry;
     font-size: 2em;
-    max-width: 4em; 
+    max-width: 9em; 
     clear: both; 
     margin: 1em auto 2em;
     color: white;
@@ -36,7 +36,7 @@ $bg-entry: rgb(80,80,80);
     }
   }
   .year.niveau{
-     max-width: 6em; 
+     max-width: 10em; 
      border-radius: 0px;
 
   }
@@ -50,7 +50,6 @@ $bg-entry: rgb(80,80,80);
   */
   .event {
     position:relative;
-    text-align:center;
     float: right;
     clear: right; 
     width: 45%;

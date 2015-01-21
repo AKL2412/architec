@@ -4,7 +4,7 @@
 app.controller("modalCtrl", function ($scope,$http,filiereProgrammeService,FiliereService) {
   this.gallery = function(rubrique){
     var container = modalBox();
-   container.html(rubrique);
+   //container.html(rubrique);
    if(rubrique == 'sport'){
       $http.get('partials/gallery/sport.php').
      success(function(data, status, headers, config) {
@@ -72,16 +72,55 @@ app.controller("historiqueNavCtrl", function () {
   };
   
 });
+
+/*================ Preinscription ==================*/
+app.controller("preinscription", function ($scope,FiliereService) {
+   $('#page-top .top-link').removeClass('active');
+    $('#page-top .top-link.preinscription').addClass('active');
+    $('html title').text($('html title').text().split("--")[0]+" -- preinscription");
+    goTop();
+    $scope.filieres = FiliereService.getFilieres();
+});
+/*================ Preinscription formulaire ==================*/
+app.controller("preinscriptionForm", function ($http) {
+  
+  this.submit = function(){
+    alert("valider");
+  }
+  
+  
+});
+
+/*================ affichage result search ==================*/
+app.controller("showResearchResult", function ($http) {
+  
+  this.show = function($event,rubique,object){
+    var main = modalBox();
+    main.html('<h1>'+object.nom+'</h1><p>'+object.description+'</p>');
+  }
+  
+});
 /*================= formulaire =====================*/
 
-app.controller("formseachCtrl", function ($scope,$window) {
-  this.result = ["array"];
-    //this.submit = function(){
-      //var chaine = explose($scope.searchInput);
-      //console.log(chaine);
-      this.result.push($scope.searchInput);
-      //$window.location.href = "#/search?q="+chaine;
-   // }
+app.controller("formseachCtrl", function (SearchingService,$scope,$window,$routeParams) {
+ $('#page-top .top-link').removeClass('active');
+  
+  if($routeParams.q != undefined){
+    this.result = SearchingService.search($routeParams.q);
+    this.box = false;
+    $scope.searchInput = $routeParams.q;
+  }else{
+    this.result = [];
+    this.box = true;
+  }
+    
+
+
+    this.submit = function(){
+      if($scope.searchInput)
+      $window.location.href = "#/search?q="+$scope.searchInput;
+    
+   }
 });
 
   /*============ tabs ==================*/
@@ -95,6 +134,7 @@ app.controller('menuTabCtrl',function(){
     $(e.currentTarget).addClass('active');
     $('.content-t').hide();
       $('#'+idContent).show();
+      goTop();
   };
 });
 
@@ -121,7 +161,7 @@ app.controller("aPropos", function () {
 /*	========== programme =================*/
 app.controller("programme", function ($scope,FormationService,FiliereService) {
   $('#page-top .top-link').removeClass('active');
-  $('#page-top .top-link.programme').addClass('active');
+  $('#page-top .top-link.formation').addClass('active');
   $('html title').text($('html title').text().split("--")[0]+' -- Programmes');
  $scope.formations = FormationService.getFormations();
  goTop();
@@ -134,7 +174,7 @@ app.controller("filiereProgramme", function ($scope,filiereProgrammeService,Fili
       window.location.href = '#/not-found?code:'+$routeParams.id;
     $scope.filiere = filiere;
     $scope.programme = filiereProgrammeService.getProgramme(filiere.id);
-    $('#page-top .top-link.programme').addClass('active');
+    $('#page-top .top-link.formation').addClass('active');
   $('html title').text($('html title').text().split("--")[0]+' -- '+filiere.nom);
 });
 /*  ========== programme =================*/
@@ -142,7 +182,7 @@ app.controller("filiereCtrl", function ($scope,FormationService,FiliereService,$
 
   var filiere = FiliereService.getFiliereById($routeParams.id);
   $('#page-top .top-link').removeClass('active');
-  $('#page-top .top-link.programme').addClass('active');
+  $('#page-top .top-link.formation').addClass('active');
     if(filiere == null)
       window.location.href = '#/not-found?code:'+$routeParams.id;
     var formation = FormationService.getFormationById(filiere.formation);

@@ -9,7 +9,7 @@
 	 <link href="css/myTimeline.css" rel="stylesheet" type="text/css" media="all"> 
 	 <link href="css/timeline.css" rel="stylesheet" type="text/css" media="all"> 
 	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
-
+	<link rel="shortcut icon" href="css/image/iam.png" />
 	<link href="css/aTimeLineHistorique.css" rel="stylesheet" type="text/css" media="all"> 
 	<link href="css/timeline-planning.css" rel="stylesheet" type="text/css" media="all"> 
 	
@@ -43,11 +43,11 @@
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      <div class="row">
 				      	<div class="col-md-3 col-sm-4 col-md-offset-3" ng-controller="formseachCtrl as sct">
-				             <form novalidate method="get" action="#/search" class="form" role="form" >
+				             <form novalidate method="get" id="formSearchIndex"  class="form" role="form" >
 				              <div class="input-group ">
-				              <input ng-model="searchInput" type="text" class="form-control " placeholder="Search...">
+				              <input ng-model="searchInput"  type="text" class="form-control " placeholder="Search...">
 				                <span class="input-group-btn">
-				                <input type="submit" class="btn btn-default" value="search"/>
+				                <input ng-click="sct.submit()" type="submit" class="btn btn-default" value="search"/>
 				                </span>
 				              </div>
 				            </form>
@@ -58,8 +58,8 @@
 				     	 <li  class="top-link home">
 				     	 <a href="#/home">Home</a>
 				     	 </li>
-				        <li  class="top-link programme"><a href="#/programmes">Programmes</a></li>
-				        <li  class="top-link"><a href="#">Formation</a></li>
+				        <!-- <li  class="top-link programme"><a href="#/programmes">Programmes</a></li> -->
+				        <li  class="top-link formation"><a href="#/formations">Formation</a></li>
 				        <li  class="top-link parascolaire"><a href="#/parascolaire">Parascolaire</a></li>
 				        <li  class="top-link contact"><a href="#/contact">Contact</a></li>
 				        <li  class="top-link blog hidden-xs a-propos">
@@ -79,8 +79,12 @@
 				        <li  class="top-link blog visible-xs a-propos">
 				        <a href="#/a-propos">A Propos</a>
 				        </li>
+				        <li  class="top-link preinscription" >
+				        	<a href="#/preinscription" >PréInscription</a>
+				        </li>
 				        <li class="dropdown">
-				          <a style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Architec <span class="caret"></span></a>
+				          <a style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				          ARCHITEC <span class="caret"></span></a>
 				          <ul class="dropdown-menu" role="menu">
 				            <li><a href="#/actualites">Actualités</a></li>
 				            <li><a href="#">Evénements</a></li>
@@ -98,39 +102,14 @@
 				</div>
 		</div>
 	</div>
-	<!-- <div class="row">
 	
-		<div class="block-message">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.
-				<i class="fa-graduation-cap fa"></i>
-				</p>
-			</div>
-			<div id="banniere">
-				
-			</div>
-
-			<div class="container">
-
-			<a href="#" class="btn btn-primary btn-ld">Manger</a>
-			<div class="col-md-4">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</div>
-				
-			</div>
-	</div> -->
 	<!-- ===================== main content ================================ -->
-	<div class="row principal-row" ng-view>
-		
-	</div>
+	 <div class="row principal-row" ng-view></div> 
 	<!-- ============================ footer ========================== -->
-	<div ng-include="'partials/footer.php'"></div>
+
+		<div ng-include="'partials/footer.php'"></div>
+	
+	
 
 	<!-- ================= JS Including ====================================== -->
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
